@@ -1,0 +1,34 @@
+FileConverter 1.1.0 - Windows 10/11 x64
+
+Includes offline conversion, English/French translation, ZIP creation/extraction,
+and authenticated AES-256 encryption/decryption. No terminal is required.
+
+During an operation you can scroll, change pages, and cancel. Queues remain
+available when you return. Inputs are retained and existing outputs receive
+numbered copies. Cancelled work is not published as a completed output.
+
+Translation defaults to the original format. DOCX media, styles, headings,
+headers/footers, tables and relationships are retained. RTF uses an Office
+round trip. PDF translation retains page artwork and fits selectable translated
+text in place; fonts may be substituted or reduced. PDF-to-Word preserves each
+page as a high-resolution image, so the visible layout remains close to the PDF
+but the page text is not directly editable. When translated text cannot fit,
+choose DOCX to allow reflow. Image-only/scanned text needs OCR. TXT is text only.
+
+Progress reflects bytes, text batches or pages where measurable. Native Office
+exports and some in-process image operations use a busy indicator until their
+API returns; their cancellation may wait for that return. Output publication
+is cancelled safely. No elapsed-time simulation is used.
+
+Encryption can process files individually or create one encrypted ZIP. Decrypt
+the combined file to ZIP and use Decompress to restore its individual files.
+ZIP modes: compress and create ZIP, create ZIP without compression, decompress.
+
+If a native dependency is missing, run Prerequisites\VC_redist.x64.exe.
+Translation diagnostics: %LOCALAPPDATA%\FileConverter\Translation\engine.log
+Component notices: OfficeRuntime\license.txt / NOTICE and Python dist-info.
+Third-party source archives: ThirdPartySource.
+LibreOffice source: https://download.documentfoundation.org/libreoffice/src/25.8.7/
+
+This build has passed Linux build/component tests. Windows GUI and installation
+smoke testing on the target computer are still required before distribution.
